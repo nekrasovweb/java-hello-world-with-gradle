@@ -321,10 +321,11 @@ Now if you run `gradle build`, Gradle should resolve the Joda Time dependency fr
   // end::repositories[]
 
   // tag::jar[]
-  jar {
-      baseName = 'hello-world-gradle'
-      version =  '0.1.0'
-  }
+   jar {
+        archiveBaseName  = "jb-hello-world"
+        archiveVersion = "0.1.1"
+        archiveExtension = "jar"
+   }
   // end::jar[]
 
   // tag::dependencies[]
