@@ -38,21 +38,16 @@ $ sudo apt-get install gradle
 ### To test the Gradle installation, run Gradle from the command-line: `gradle`
 + If all goes well, you see a welcome message:
 ```
-:help
-
-Welcome to Gradle 2.8.
-
-To run a build, run gradle <task> ...
-
-To see a list of available tasks, run gradle tasks
-
-To see a list of command-line options, run gradle --help
-
-To see more detail about a task, run gradle help --task <task>
-
-BUILD SUCCESSFUL
-
-Total time: 6.317 secs
+:> Task :help
+ 
+ Welcome to Gradle 6.7.1.
+ 
+ To run a build, run gradle <task> ...
+ To see a list of available tasks, run gradle tasks
+ To see a list of command-line options, run gradle --help
+ To see more detail about a task, run gradle help --task <task>
+ For troubleshooting, visit https://help.gradle.org
+ 
 ```
 
 +  You now have Gradle installed.
