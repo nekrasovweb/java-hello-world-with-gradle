@@ -36,18 +36,23 @@ mainClassName = 'hello.HelloWorld'
 
 repositories {
 
-    mavenCentral()
-    if (project.hasProperty("repoUrl")) {
-        println("Custom repo enable")
-        maven {
-            url "$repoUrl"
-        }
-    }
 
+    if (project.hasProperty("repoUrl")) {
+        println("Custom repo enable: '$repoUrl'")
+        maven {
+            credentials {
+                username project.properties['repoUsername']
+                password project.properties['repoPassword']
+            }
+            url project.properties['repoUrl']
+        }
+    } else {
+        mavenCentral()
+    }
 }
 
 jar {
-    archiveBaseName  = "jb-hello-world"
+    archiveBaseName = "jb-hello-world"
     archiveVersion = "0.1.1"
     archiveExtension = "jar"
 }
